@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_1_0.xsd" version="1.0">
+    <persistence-unit name="bibliotecaPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        
+        
+        <class>entity.Cliente</class>
+        <class>entity.Recepcionsta</class>
+        <class>entity.Multa</class>
+        <class>entity.Emprestimo</class>
+        <class>entity.Livro</class>
+
+        
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost/NomeDoBD"/>
+            <property name="jakarta.persistence.jdbc.user" value="coloque seu perfil"/>
+            <property name="jakarta.persistence.jdbc.password" value="coloque sunha senha"/>
+
+	        <property name="eclipselink.logging.level" value="FINE" /> 
+			<property name="eclipselink.ddl-generation" value="create-tables" />
+			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+            
+        </properties>
+    </persistence-unit>
+</persistence>
